@@ -1,7 +1,7 @@
 import client from '../clients/hubSpotClient.js';
 import config from '../config/index.js';
 
-const BASE_PATH = '/crm/v3/objects/contacts'
+const BASE_PATH = '/crm/v4/objects/contacts'
 const DEFAULT_PROPERTIES = ['firstname', 'lastname', 'email', 'phone', 'company']
 
 async function getAllContactNames(options = {}) {
@@ -78,10 +78,35 @@ const deleteContact = async (contactId) => {
   return response;
 }
 
+const getContactsByEmail = async (arrayEmails) => {
+  if (!Array.isArray(arrayEmails) || arrayEmails.length === 0) {
+    throw new Error('Invalid input. Please provide a non-empty array of email addresses.');
+  }
+
+  const params = {
+    limit: config.pageSize,
+    filterGroups: [
+      {
+        filters: [
+          {
+            propertyName: "email",
+            values: arrayEmails,
+            "operator": "IN"
+          }
+        ]
+      }
+    ]
+  }
+
+  const response = await client.post(`/crm/objects/2026-09/contacts/search`, params)
+  return response;
+}
+
 export default {
   getAllContactNames,
   getContacts,
   create,
   update,
-  deleteContact
+  deleteContact,
+  getContactsByEmail
 }

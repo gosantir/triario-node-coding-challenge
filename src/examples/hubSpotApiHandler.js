@@ -1,6 +1,9 @@
 import hubSpotService from '../services/hubSpotService.js';
 import { printHeader } from '../utils/print-header.js';
 
+// import mockContacs from '../data/mockContacts.json' with { type: 'json' };
+import mockDeals from '../data/mockDeals.json' with { type: 'json' };
+
 const commands = {
   'list-all-contact-names': async () => {
     printHeader('List All Contact Names');
@@ -47,7 +50,7 @@ const commands = {
   },
   'delete-contact': async () => {
     printHeader('Delete Contact')
-    const contactId = '249322723977'; // Replace with the actual contact ID you want to delete
+    const contactId = '249777201573'; // Replace with the actual contact ID you want to delete
     const result = await hubSpotService.deleteHubSpotContact(contactId)
     console.log('Contact deleted successfully:', result)
   },
@@ -86,7 +89,28 @@ const commands = {
     const dealId = '65124425622'; // Replace with the actual deal ID you want to delete
     const result = await hubSpotService.deleteHubSpotDeal(dealId)
     console.log('Deal deleted successfully:', result)
-  }
+  },
+  'associate-contact-to-deal': async () => {
+    printHeader('Associate Contact to Deal')
+    const contactId = '249332045134'; // Replace with the actual contact ID you want to associate
+    const dealId = '65122530304'; // Replace with the actual deal ID you want to associate
+    const result = await hubSpotService.associateContactToDeal(contactId, dealId)
+    console.log('Contact associated to deal successfully:', result)
+  },
+  'sync-contacts': async () => {
+    printHeader('Sync Contacts with HubSpot')
+    const { default: data } = await import('../data/mockContacts.json', { with: { type: 'json' } });
+
+    const result = await hubSpotService.syncContactsWithHubSpot(data)
+    console.log('Contacts synced successfully:', result)
+  },
+  // 'sync-deals': async () => {
+  //   printHeader('Sync Deals with HubSpot')
+  //   const { default: data } = await import('../data/mockContacts.json', { with: { type: 'json' } });
+
+  //   const result = await hubSpotService.syncDealsWithHubSpot(data)
+  //   console.log('Deals synced successfully:', result)
+  // },
 }
 
 

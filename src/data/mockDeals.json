@@ -1,0 +1,50 @@
+[
+  {
+    "amount": "8500.00",
+    "dealname": "New deal Example 1",
+    "pipeline": "default",
+    "dealstage": "contractsent"
+  },
+  {
+    "amount": "12500.00",
+    "dealname": "Northstar Analytics Expansion",
+    "pipeline": "default",
+    "dealstage": "appointmentscheduled"
+  },
+  {
+    "amount": "4200.00",
+    "dealname": "CloudBase Starter Package",
+    "pipeline": "default",
+    "dealstage": "qualifiedtobuy"
+  },
+  {
+    "amount": "18750.00",
+    "dealname": "DataSoft Enterprise Renewal",
+    "pipeline": "default",
+    "dealstage": "presentationscheduled"
+  },
+  {
+    "amount": "9600.00",
+    "dealname": "TechCorp Integration Project",
+    "pipeline": "default",
+    "dealstage": "decisionmakerboughtin"
+  },
+  {
+    "amount": "3100.00",
+    "dealname": "InnovateLtd Support Upgrade",
+    "pipeline": "default",
+    "dealstage": "contractsent"
+  },
+  {
+    "amount": "27500.00",
+    "dealname": "NetSolutions Platform Rollout",
+    "pipeline": "default",
+    "dealstage": "closedwon"
+  },
+  {
+    "amount": "6800.00",
+    "dealname": "BrightPath Consulting Services",
+    "pipeline": "default",
+    "dealstage": "closedlost"
+  }
+]

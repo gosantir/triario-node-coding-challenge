@@ -1,21 +1,19 @@
 import client from '../clients/hubSpotClient.js';
-import config from '../config/index.js';
 
-const BASE_PATH = '/crm/v3/objects/deals';
-const DEFAULT_PROPERTIES = [
-  'dealname',
-  'amount',
-  'dealstage',
-  'pipeline',
-  'closedate',
-  'hubspot_owner_id',
-]
+async function associateContactToDeal(contactId, dealId) {
+  const url = `/crm/objects/2026-09/contacts/${contactId}/associations/deals/${dealId}`
 
-async function associateContactToDeal(options = {}) {
+  const payload = [
+    {
+      associationCategory: 'HUBSPOT_DEFINED',
+      associationTypeId: 4,
+    },
+  ];
+
+  const response = await client.put(url, payload)
+  return response
 }
 
 export default {
   associateContactToDeal,
-  syncContactsWithHubSpot,
-  syncDealsWithHubSpot,
 }

@@ -1,7 +1,7 @@
 import client from '../clients/hubSpotClient.js';
 import config from '../config/index.js';
 
-const BASE_PATH = '/crm/v3/objects/deals';
+const BASE_PATH = '/crm/v4/objects/deals';
 const DEFAULT_PROPERTIES = [
   'dealname',
   'amount',

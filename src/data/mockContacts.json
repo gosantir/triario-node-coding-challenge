@@ -1,0 +1,58 @@
+[
+  {
+    "firstname": "Juan",
+    "lastname": "Perez",
+    "email": "perez.juan@triario.com",
+    "phone": "+57325458888",
+    "company": "Triario"
+  },
+  {
+    "firstname": "Laura",
+    "lastname": "Gomez",
+    "email": "laura.gomez@example.com",
+    "phone": "+573105551001",
+    "company": "Northstar Analytics"
+  },
+  {
+    "firstname": "Miguel",
+    "lastname": "Torres",
+    "email": "miguel.torres@example.com",
+    "phone": "+573105551002",
+    "company": "CloudBase"
+  },
+  {
+    "firstname": "Sofia",
+    "lastname": "Martinez",
+    "email": "sofia.martinez@example.com",
+    "phone": "+573105551003",
+    "company": "DataSoft"
+  },
+  {
+    "firstname": "Andres",
+    "lastname": "Ramirez",
+    "email": "andres.ramirez@example.com",
+    "phone": "+573105551004",
+    "company": "TechCorp"
+  },
+  {
+    "firstname": "Camila",
+    "lastname": "Rojas",
+    "email": "camila.rojas@example.com",
+    "phone": "+573105551005",
+    "company": "InnovateLtd"
+  },
+  {
+    "firstname": "Daniel",
+    "lastname": "Castro",
+    "email": "daniel.castro@example.com",
+    "phone": "+573105551006",
+    "company": "NetSolutions"
+  },
+  {
+    "firstname": "Valentina",
+    "lastname": "Moreno",
+    "email": "valentina.moreno@example.com",
+    "phone": "+573105551007",
+    "company": "BrightPath Consulting"
+  }
+]
